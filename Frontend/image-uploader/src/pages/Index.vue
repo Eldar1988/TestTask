@@ -24,19 +24,23 @@ export default {
   computed: {
     token() {
       return localStorage.getItem('token')
-    },
-    user() {
-      return this.$store.getters.getUser
     }
   },
   data() {
     return {
-      image: null
+      image: null,
+      user: null
     }
+  },
+  mounted() {
+    this.getUser()
   },
   methods: {
     uploadFileRejected,
-    notifier
+    notifier,
+    getUser() {
+      this.user = this.$store.getters.getUser
+    }
   }
 }
 </script>

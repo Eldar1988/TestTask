@@ -21,7 +21,6 @@ class ImageActionsView(APIView):
     Метод post - добавляет картинку по id
     Метод put - изменяет картинку по id
     """
-
     parser_classes = [MultiPartParser, FileUploadParser]
 
     def get(self, request, pk):

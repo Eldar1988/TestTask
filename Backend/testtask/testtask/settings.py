@@ -123,7 +123,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = 'http://192.168.0.199:8000/media/'
-# MEDIA_URL = 'http://192.168.0.199:8000/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -136,7 +135,6 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%d.%m.%Y %H:%M",
 }
 
-
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
     'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
@@ -144,7 +142,6 @@ DJOSER = {
     'SEND_ACTIVATION_EMAIL': False,
     'SERIALIZERS': {},
 }
-
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=50),
@@ -180,6 +177,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'elfarych@gmail.com'
 EMAIL_HOST_PASSWORD = 'Eldar198804!!!'
 DEFAULT_FROM_EMAIL = 'elfarych@gmail.com'
-
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240

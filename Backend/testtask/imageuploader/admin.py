@@ -3,7 +3,6 @@ from django.utils.safestring import mark_safe
 
 from .models import Image, ImageAction
 
-
 admin.site.register(ImageAction)
 
 
@@ -16,6 +15,3 @@ class ImageUploaderAdmin(admin.ModelAdmin):
         return mark_safe(f'<img src={obj.image.url} style="height: 50px; width: 50px; object-fit: contain;">')
 
     get_image.short_description = 'Миниатюра'
-
-
-

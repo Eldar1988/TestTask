@@ -13,7 +13,8 @@ def new_image_action(image_action, obj, action_type):
 
 
 def send_image_uploaded_mail(user, obj):
-    send_mail('Test', f'{user.username}; {datetime.now(timezone.utc).astimezone()}; {obj.image.url}', 'elfarych@gmail.com',  [user.email], fail_silently=False)
+    send_mail('Test', f'{user.username}; {datetime.now(timezone.utc).astimezone()}; {obj.image.url}',
+              'elfarych@gmail.com', [user.email], fail_silently=False)
 
 
 def path_and_rename(path, prefix):
@@ -23,4 +24,5 @@ def path_and_rename(path, prefix):
         filename = "{}{}.{}".format(prefix, uuid4().hex, ext)
         # return the whole path to the file
         return os.path.join(path, filename)
+
     return wrapper

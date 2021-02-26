@@ -19,7 +19,9 @@ Vue.use(Vuex)
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     state: {
-      serverURL: 'http://192.168.0.199:8000'
+      // serverURL: 'http://192.168.0.199:8000'
+      serverURL: 'https://test.js-code.ru'
+
     },
     getters: {
       getServerURL: (state) => state.serverURL
