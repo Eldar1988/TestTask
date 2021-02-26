@@ -44,7 +44,7 @@ export default {
           password: user.password,
           email: user.email
         }).then(response => {
-          notifier(response.statusText, response.status === 201 ? 'positive' : 'dark')
+          notifier('created', response.status === 201 ? 'positive' : 'dark')
           return 'created'
         })
       } catch (e) {
